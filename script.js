@@ -46,3 +46,7 @@ window.addEventListener('scroll', scroll => {
         }
     },100)
 })
+
+function toggleDarkMode(){
+    document.documentElement.classList.toggle('dark')
+}

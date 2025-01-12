@@ -7,35 +7,41 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="images/logo.svg">
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <title>Roomify</title>
 </head>
 
 <body>
     <!-- Header -->
-    <div id="header" class="sticky top-0 z-50">
+    <div id="header" class="sticky top-0 z-50 dark:bg-gray-900">
         <!-- Navbar -->
-        <div class="relative flex items-center justify-between py-6 px-6 xl:max-w-[90%] mx-auto">
+        <div class="relative flex items-center justify-between py-6 px-6 xl:max-w-[90%] mx-auto ">
             <!-- Logo -->
             <div class="flex space-x-6 justify-between items-center">
-                <svg class="w-12 h-12 fill-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <svg class="w-12 h-12 fill-blue-700 dark:fill-blue-400" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50">
                     <path
                         d="M 25 2 C 13 2 5.8451563 11.770094 5.7851562 11.871094 C 5.7201562 11.979094 5.7467031 12.119266 5.8457031 12.197266 C 5.8917031 12.232266 5.946 12.25 6 12.25 C 6.064 12.25 6.1287344 12.225734 6.1777344 12.177734 C 6.2567344 12.098734 14.246 4.001 25 4 C 35.783 4.001 43.743266 12.097734 43.822266 12.177734 C 43.870266 12.226734 43.935 12.25 44 12.25 C 44.054 12.25 44.108297 12.233266 44.154297 12.197266 C 44.253297 12.119266 44.279844 11.980094 44.214844 11.871094 C 44.154844 11.770094 38 2 25 2 z M 25.003906 14.5 C 22.301906 14.504 21.905297 18.46075 21.404297 23.46875 C 20.957297 27.93775 20.400906 33.5 18.003906 33.5 C 16.101906 33.5 15.814469 28.809766 15.605469 25.384766 C 15.371469 21.540766 15.185391 18.5 13.025391 18.5 L 12.986328 18.5 C 11.160328 18.531 10.822641 20.939516 10.431641 23.728516 C 10.214641 25.276516 9.7639062 28.5 9.0039062 28.5 C 8.2299062 28.5 7.8630937 27.036531 7.4960938 25.269531 C 7.1300938 23.502531 6.7149531 21.5 5.0019531 21.5 C 3.1149531 21.5 1.9707656 25.386 2.5097656 25.5 C 3.0357656 25.611 4.612875 23.624625 4.921875 23.515625 C 5.160875 23.849625 5.3931094 24.979828 5.5371094 25.673828 C 5.9591094 27.710828 6.5379062 30.5 9.0039062 30.5 C 11.502906 30.5 11.986109 27.049859 12.412109 24.005859 C 12.560109 22.951859 12.768109 21.455766 13.037109 20.759766 C 13.372109 21.647766 13.512375 23.925812 13.609375 25.507812 C 13.895375 30.191813 14.219906 35.5 18.003906 35.5 C 22.210906 35.5 22.840531 29.213969 23.394531 23.667969 C 23.627531 21.343969 24.111859 16.507 25.005859 16.5 C 25.896859 16.507 26.379328 21.339109 26.611328 23.662109 C 27.166328 29.210109 27.797812 35.5 32.007812 35.5 C 35.789813 35.5 36.113391 30.192766 36.400391 25.509766 C 36.497391 23.927766 36.637656 21.648766 36.972656 20.759766 C 37.241656 21.456766 37.449656 22.951859 37.597656 24.005859 C 38.023656 27.049859 38.507812 30.5 41.007812 30.5 C 43.473813 30.5 44.049703 27.710828 44.470703 25.673828 C 44.613703 24.979828 44.847938 23.850625 45.085938 23.515625 C 45.395937 23.624625 46.981094 25.694 47.496094 25.5 C 48.013094 25.305 46.889906 21.5 45.003906 21.5 C 43.290906 21.5 42.876719 23.502531 42.511719 25.269531 C 42.146719 27.036531 41.781813 28.5 41.007812 28.5 C 40.246813 28.5 39.795125 25.277516 39.578125 23.728516 C 39.187125 20.938516 38.849438 18.53 37.023438 18.5 L 36.984375 18.5 C 34.824375 18.5 34.637344 21.541719 34.402344 25.386719 C 34.193344 28.810719 33.907812 33.5 32.007812 33.5 C 29.606813 33.5 29.049563 27.936844 28.601562 23.464844 C 28.101562 18.458844 27.706813 14.504 25.007812 14.5 L 25.003906 14.5 z M 6 37.775391 C 5.946 37.775391 5.8907031 37.792125 5.8457031 37.828125 C 5.7467031 37.906125 5.7201562 38.046297 5.7851562 38.154297 C 5.8451562 38.255297 13 48.025391 25 48.025391 C 38 48.025391 44.154844 38.255297 44.214844 38.154297 C 44.279844 38.045297 44.253297 37.906125 44.154297 37.828125 C 44.108297 37.792125 44.054 37.775391 44 37.775391 C 43.935 37.775391 43.870266 37.798656 43.822266 37.847656 C 43.743266 37.927656 35.783 46.024391 25 46.025391 C 14.247 46.024391 6.2567344 37.926656 6.1777344 37.847656 C 6.1287344 37.799656 6.064 37.775391 6 37.775391 z">
                     </path>
                 </svg>
-                <h1 class="text-2xl font-serif font-bold tracking-wide capitalize">roomify</h1>
+                <h1 class="text-2xl font-serif font-bold tracking-wide capitalize dark:text-white">roomify</h1>
             </div>
             <div id="mobile-navbar"
-                class="hidden top-20 right-0 bg-blue-200 w-screen h-96 space-y-12 py-6 px-8 lg:h-0 lg:top-0 lg:py-0 lg:px-0 lg:static lg:flex lg:bg-white lg:justify-evenly lg:space-x-12 lg:space-y-0 xl:justify-around">
+                class="hidden top-20 right-0 bg-blue-200 w-screen h-screen space-y-12 py-6 px-8 lg:h-0 lg:top-0 lg:py-0 lg:px-0 lg:static lg:flex lg:bg-white lg:justify-evenly lg:items-center lg:space-x-12 lg:space-y-0 xl:space-x-9 xl:justify-around dark:bg-gray-900">
                 <!-- Navbar links -->
                 <ul class="flex flex-col lg:items-center lg:flex-row lg:md:space-x-9 justify-between">
-                    <li><a class="text-md capitalize font-serif text-blue-700 text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
+                    <li><a class="text-md capitalize font-serif text-blue-700 dark:text-white text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
                             href="#">home</a>
                     </li>
-                    <li><a class="text-md capitalize font-serif text-blue-700 text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
+                    <li><a class="text-md capitalize font-serif text-blue-700 dark:text-white text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
                             href="#companies">companies</a></li>
-                    <li><a class="text-md capitalize font-serif text-blue-700 text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
+                    <li><a class="text-md capitalize font-serif text-blue-700 dark:text-white text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
                             href="#">downloads</a></li>
-                    <li><a class="text-md capitalize font-serif text-blue-700 text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
+                    <li><a class="text-md capitalize font-serif text-blue-700 dark:text-white text-lg hover:underline decoration-white lg:decoration-blue-700 underline-offset-4 lg:text-black"
                             href="#">plan &
                             pricings</a>
                     </li>
@@ -50,6 +56,15 @@
                         class="py-2 px-8 bg-blue-700 text-white font-semibold border hover:bg-white hover:text-blue-700 hover:border-blue-700 duration-300 rounded-full capitalize">log
                         in</button>
                 </div>
+                <!-- Theme button -->
+                <button onclick="toggleDarkMode()"
+                    class="py-2 px-6 rounded-lg border border-slate-800 bg-black dark:bg-white">
+                    <svg class="fill-white dark:fill-black" xmlns="http://www.w3.org/2000/svg" height="20px"
+                        viewBox="0 -960 960 960" width="24px">
+                        <path
+                            d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z" />
+                    </svg>
+                </button>
             </div>
             <!-- Hamburger -->
             <div id="hamburger" class="relative lg:hidden group min-w-[20px] min-h-[20px] cursor-pointer">
@@ -64,13 +79,14 @@
 
     <!-- Hero Section -->
     <div
-        class="flex flex-col px-6 space-y-8 my-9 py-24 items-center justify-between lg:flex-row lg:space-y-0 md:justify-evenly">
+        class="flex flex-col px-6 space-y-8 py-24 items-center justify-between lg:flex-row lg:space-y-0 md:justify-evenly dark:bg-gray-800">
         <!-- Content -->
         <div class="flex flex-col space-y-6 md:max-w-xl">
-            <h2 class="text-5xl font-serif font-bold tracking-wide leading-tight text-center lg:text-left">
+            <h2
+                class="text-5xl font-serif font-bold tracking-wide leading-tight text-center lg:text-left dark:text-white">
                 Supercharge your meetings and made it effective
             </h2>
-            <p class="text-slate-500 text-lg text-center lg:text-left">
+            <p class="text-slate-500 text-lg text-center lg:text-left dark:text-slate-400">
                 Experience the future of virtual communication today. Say hello to a whole new way of connecting
             </p>
             <div class="max-w-72 mx-auto lg:mx-0">
@@ -86,9 +102,9 @@
     </div>
 
     <!-- 2nd content Companies used -->
-    <div id="companies" class="flex flex-col items-center py-16 px-3 space-y-16 bg-zinc-100">
+    <div id="companies" class="flex flex-col items-center py-16 px-3 space-y-16 bg-zinc-100 dark:bg-gray-900">
         <div>
-            <h3 class="text-3xl font-serif font-bold tracking-wide text-center">
+            <h3 class="text-3xl font-serif font-bold tracking-wide text-center dark:text-zinc-100">
                 Used by professionals on
             </h3>
         </div>
@@ -96,45 +112,48 @@
         <div class="flex flex-col items-center space-y-12 xl:flex-row xl:space-y-0 xl:space-x-12">
             <div class="flex flex-col items-center space-y-6 md:flex-row md:space-y-0 md:space-x-16">
                 <div class="flex space-x-2 items-center">
-                    <h3 class="text-5xl text-zinc-400 font-bold">C</h3>
-                    <h2 class="text-4xl text-zinc-400 font-semibold">contentful</h2>
+                    <h3 class="text-5xl text-zinc-400 dark:text-zinc-300 font-bold">C</h3>
+                    <h2 class="text-4xl text-zinc-400 dark:text-zinc-300 font-semibold">contentful</h2>
                 </div>
                 <div class="flex space-x-2 items-center">
-                    <h2 class="text-4xl text-zinc-400 font-semibold">stripe</h2>
+                    <h2 class="text-4xl text-zinc-400 dark:text-zinc-300 font-semibold">stripe</h2>
                 </div>
             </div>
 
             <div class="flex flex-col items-center space-y-9 md:flex-row md:space-y-0 md:space-x-16">
                 <div class="flex space-x-2 items-center">
-                    <svg class="w-12 h-12 fill-zinc-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <svg class="w-12 h-12 fill-zinc-400 dark:text-zinc-300 " xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50">
                         <path
                             d="M 22.839844 2.0351562 C 19.659152 1.9484924 16.325547 6.1910156 14.529297 12.720703 L 8.8847656 14.560547 C 8.5177656 14.680547 8.2511719 14.999812 8.2011719 15.382812 L 4.7558594 42.193359 C 4.6888594 42.718359 5.0415 43.204734 5.5625 43.302734 L 29.630859 47.882812 L 31.488281 7.1972656 L 30.376953 7.5585938 C 29.713953 5.1145938 28.473844 3.5775156 26.839844 3.2285156 C 26.344844 3.1205156 25.866344 3.1427656 25.402344 3.2597656 C 24.845344 2.6717656 24.203656 2.266375 23.472656 2.109375 C 23.262469 2.0645 23.05189 2.0409338 22.839844 2.0351562 z M 22.720703 4.0371094 C 22.835859 4.0344238 22.948953 4.0437813 23.056641 4.0664062 C 23.227641 4.1034062 23.392734 4.17925 23.552734 4.28125 C 21.567734 5.97825 20.050047 9.1985469 19.248047 11.185547 L 16.847656 11.966797 C 18.482656 6.9417969 20.993363 4.0773926 22.720703 4.0371094 z M 26.65625 5.2675781 C 27.42425 5.5845781 28.071563 6.6167344 28.476562 8.1777344 L 27.453125 8.5117188 C 27.293125 7.2737188 27.02925 6.1775781 26.65625 5.2675781 z M 24.755859 5.9179688 C 25.120859 6.7669688 25.386484 7.865625 25.521484 9.140625 L 21.791016 10.355469 C 22.804016 8.2054687 23.847859 6.7299688 24.755859 5.9179688 z M 33.482422 7.3964844 L 31.636719 47.806641 L 44.216797 45.023438 C 44.728797 44.910438 45.065234 44.421297 44.990234 43.904297 C 43.389234 32.807297 40.349922 11.701203 40.294922 11.283203 C 40.283922 11.183203 40.25875 11.085188 40.21875 10.992188 C 40.02275 10.542188 39.668313 10.219641 39.195312 10.056641 C 39.103313 10.025641 38.993484 10.007906 38.896484 10.003906 C 38.674484 9.9949062 36.702281 9.8413906 35.863281 9.7753906 C 35.177281 9.0743906 33.860578 7.7328281 33.517578 7.4238281 C 33.506578 7.4128281 33.493422 7.4064844 33.482422 7.3964844 z M 22.71875 18.023438 C 24.78275 18.023438 25.880734 18.672172 25.927734 18.701172 C 26.124734 18.820172 26.213578 19.06125 26.142578 19.28125 L 24.630859 23.941406 C 24.584859 24.083406 24.479797 24.196953 24.341797 24.251953 C 24.201797 24.309953 24.046016 24.298516 23.916016 24.228516 C 23.903016 24.221516 22.63025 23.539063 21.15625 23.539062 C 19.37325 23.539062 19.107422 24.451141 19.107422 24.994141 C 19.107422 25.583141 19.880344 26.166844 20.777344 26.839844 C 22.364344 28.031844 24.537109 29.663453 24.537109 32.939453 C 24.537109 37.043453 21.982219 39.912109 18.324219 39.912109 C 14.164219 39.912109 12.069422 37.320937 11.982422 37.210938 C 11.881422 37.083937 11.848531 36.913813 11.894531 36.757812 L 12.957031 33.185547 C 13.006031 33.022547 13.136781 32.894656 13.300781 32.847656 C 13.463781 32.803656 13.641531 32.840172 13.769531 32.951172 C 13.789531 32.969172 15.726719 34.662109 17.261719 34.662109 C 18.154719 34.662109 18.390625 33.946359 18.390625 33.568359 C 18.390625 32.588359 17.673625 31.991328 16.765625 31.236328 C 15.511625 30.194328 13.953125 28.897031 13.953125 26.082031 C 13.953125 22.201031 16.658609 18.025391 22.599609 18.025391 C 22.639609 18.025391 22.67875 18.023438 22.71875 18.023438 z">
                         </path>
                     </svg>
-                    <h2 class="text-4xl text-zinc-400 font-semibold">shopify</h2>
+                    <h2 class="text-4xl text-zinc-400 dark:text-zinc-300  font-semibold">shopify</h2>
                 </div>
                 <div class="flex space-x-2 items-center">
-                    <svg class="w-12 h-12 fill-zinc-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <svg class="w-12 h-12 fill-zinc-400 dark:text-zinc-300 " xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50">
                         <path
                             d="M31 24c-2.757 0-5-2.243-5-5V7c0-2.757 2.243-5 5-5s5 2.243 5 5v12C36 21.757 33.757 24 31 24zM43 24h-4c-.553 0-1-.447-1-1v-4c0-2.757 2.243-5 5-5s5 2.243 5 5S45.757 24 43 24zM19 24H7c-2.757 0-5-2.243-5-5s2.243-5 5-5h12c2.757 0 5 2.243 5 5S21.757 24 19 24zM23 12h-4c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5v4C24 11.553 23.553 12 23 12zM19 48c-2.757 0-5-2.243-5-5V31c0-2.757 2.243-5 5-5s5 2.243 5 5v12C24 45.757 21.757 48 19 48zM7 36c-2.757 0-5-2.243-5-5s2.243-5 5-5h4c.553 0 1 .447 1 1v4C12 33.757 9.757 36 7 36zM43 36H31c-2.757 0-5-2.243-5-5s2.243-5 5-5h12c2.757 0 5 2.243 5 5S45.757 36 43 36zM31 48c-2.757 0-5-2.243-5-5v-4c0-.553.447-1 1-1h4c2.757 0 5 2.243 5 5S33.757 48 31 48z">
                         </path>
                     </svg>
-                    <h2 class="text-4xl text-zinc-400 font-semibold">slack</h2>
+                    <h2 class="text-4xl text-zinc-400 dark:text-zinc-300  font-semibold">slack</h2>
                 </div>
             </div>
 
             <div class="flex flex-col items-center space-y-6 md:flex-row md:space-y-0 md:space-x-16">
                 <div class="flex space-x-2 items-center">
-                    <svg class="w-12 h-12 fill-zinc-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <svg class="w-12 h-12 fill-zinc-400 dark:text-zinc-300 " xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50">
                         <path
                             d="M 25 3 C 22.278263 3 19.522066 4.4268292 18.099609 7.2148438 C 15.093409 13.052195 11.903343 19.320627 9.3828125 24.386719 C 8.1223752 26.92011 7.0290661 29.153447 6.2089844 30.884766 C 5.3889026 32.616084 4.861567 33.764956 4.6464844 34.451172 L 4.6445312 34.453125 L 4.6445312 34.455078 C 4.3577186 35.38722 4.0507812 36.481126 4.0507812 37.710938 C 4.0507781 42.832327 8.2305224 47 13.359375 47 C 19.03288 47 23.036205 42.461271 24.912109 40.310547 L 25 40.423828 L 25.087891 40.310547 C 26.963795 42.461271 30.96712 47 36.640625 47 C 41.769478 47 45.949219 42.832422 45.949219 37.710938 C 45.949219 36.481125 45.642282 35.38722 45.355469 34.455078 L 45.355469 34.453125 L 45.353516 34.451172 C 45.13848 33.76505 44.611097 32.616084 43.791016 30.884766 C 42.970934 29.153447 41.877624 26.92011 40.617188 24.386719 C 38.096657 19.320627 34.906591 13.052195 31.900391 7.2148438 L 31.898438 7.2128906 C 30.475651 4.4265424 27.720912 3 25 3 z M 25 5 C 27.038263 5 29.041597 6.0130146 30.119141 8.125 L 30.119141 8.1269531 L 30.121094 8.1269531 C 33.124534 13.958924 36.314 20.224126 38.828125 25.277344 C 40.085188 27.803952 41.173832 30.029053 41.984375 31.740234 C 42.793941 33.449352 43.342474 34.724209 43.443359 35.044922 C 43.716547 35.93278 43.949219 36.820748 43.949219 37.710938 C 43.949172 41.749456 40.691772 45 36.640625 45 C 32.064075 45 28.191648 40.852578 26.308594 38.748047 L 27.367188 37.394531 C 29.069161 35.216293 32 31.089972 32 26.958984 C 32 23.127032 28.847531 20 25 20 C 21.152469 20 18 23.127032 18 26.958984 C 18 31.099428 20.931726 35.222186 22.632812 37.396484 L 23.691406 38.75 C 21.80799 40.854873 17.935204 45 13.359375 45 C 9.3082276 45 6.0507813 41.749453 6.0507812 37.710938 C 6.0507812 36.820749 6.2834534 35.93278 6.5566406 35.044922 C 6.6575261 34.724209 7.2060594 33.449352 8.015625 31.740234 C 8.8261683 30.029053 9.9148123 27.803952 11.171875 25.277344 C 13.686 20.224126 16.875466 13.958924 19.878906 8.1269531 L 19.880859 8.1269531 L 19.880859 8.125 C 20.958356 6.0130146 22.961737 5 25 5 z M 25 22 C 27.770469 22 30 24.218937 30 26.958984 C 30 30.069996 27.391041 34.116301 25.791016 36.164062 L 25 37.177734 L 24.207031 36.164062 C 22.608118 34.120362 20 30.082541 20 26.958984 C 20 24.218937 22.229531 22 25 22 z">
                         </path>
                     </svg>
-                    <h2 class="text-4xl text-zinc-400 font-semibold">airbnb</h2>
+                    <h2 class="text-4xl text-zinc-400 dark:text-zinc-300  font-semibold">airbnb</h2>
                 </div>
                 <div class="flex space-x-2 items-center">
-                    <svg class="fill-zinc-400" width="180" height="60" viewBox="0 0 328 60" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="fill-zinc-400 dark:text-zinc-300 " width="180" height="60" viewBox="0 0 328 60"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M5.62995 52.7353C-1.87675 45.2944 -1.87663 33.2306 5.63018 25.7899L26.019 5.5806C32.365 -0.709432 42.0439 -1.68223 49.4208 2.66222C51.7025 4.00599 51.6826 7.08859 49.8058 8.94879C47.9291 10.809 44.8657 10.6489 42.3183 9.91041C39.0563 8.96475 35.388 9.76694 32.8153 12.317L12.4264 32.5263C8.67299 36.2467 8.67294 42.2786 12.4263 45.999C16.1797 49.7195 22.2653 49.7195 26.0188 45.9991L66.7961 5.58086C74.303 -1.85989 86.4739 -1.85992 93.9808 5.58077L114.37 25.7899C121.877 33.2306 121.877 45.2946 114.37 52.7353C106.863 60.1761 94.692 60.1761 87.1851 52.7353L80.3888 45.9989L71.8935 54.4194C65.5476 60.7094 55.8686 61.6822 48.4918 57.3378C46.21 55.994 46.23 52.9114 48.1067 51.0512C49.9835 49.191 53.0469 49.3511 55.5943 50.0896C58.8563 51.0353 62.5246 50.2331 65.0973 47.683L73.8353 39.0219C77.4547 35.4344 83.3229 35.4344 86.9423 39.0219L93.9814 45.999C97.7348 49.7193 103.82 49.7193 107.574 45.999C111.327 42.2786 111.327 36.2467 107.574 32.5263L87.1847 12.3172C83.4312 8.59686 77.3458 8.59688 73.5923 12.3172L32.8151 52.7355C25.3081 60.1764 13.1368 60.1763 5.62995 52.7353Z">
                         </path>
@@ -161,35 +180,37 @@
             <div class="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-12 xl:space-x-32">
                 <!-- Price -->
                 <div class="flex flex-col space-y-2 items-center">
-                    <h3 class="text-6xl font-bold tracking-widest">200K+</h3>
-                    <p class="text-zinc-400 text-lg">User using the platform</p>
+                    <h3 class="text-6xl font-bold tracking-widest dark:text-slate-50">200K+</h3>
+                    <p class="text-zinc-400 dark:text-slate-50 text-lg">User using the platform</p>
                 </div>
                 <!-- Price -->
                 <div class="flex flex-col space-y-2 items-center">
-                    <h3 class="text-6xl font-bold tracking-widest">98%</h3>
-                    <p class="text-zinc-400 text-lg">Revenue growth</p>
+                    <h3 class="text-6xl font-bold tracking-widest dark:text-slate-50">98%</h3>
+                    <p class="text-zinc-400 text-lg dark:text-slate-50">Revenue growth</p>
                 </div>
             </div>
 
             <div class="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-12 xl:space-x-32">
                 <!-- Price -->
                 <div class="flex flex-col space-y-2 items-center">
-                    <h3 class="text-6xl font-bold tracking-widest">150+</h3>
-                    <p class="text-zinc-400 text-lg">Corporation companies</p>
+                    <h3 class="text-6xl font-bold tracking-widest dark:text-slate-50">150+</h3>
+                    <p class="text-zinc-400 text-lg dark:text-slate-50">Corporation companies</p>
                 </div>
                 <!-- Price -->
                 <div class="flex flex-col space-y-2 items-center">
-                    <h3 class="text-6xl font-bold tracking-widest">10pb</h3>
-                    <p class="text-zinc-400 text-lg">Data saved</p>
+                    <h3 class="text-6xl font-bold tracking-widest dark:text-slate-50">10pb</h3>
+                    <p class="text-zinc-400 text-lg dark:text-slate-50">Data saved</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Solutions Content -->
-    <div class="flex flex-col space-y-16 px-9 py-28 lg:flex-row lg:space-y-0  lg:items-center xl:px-32">
+    <div
+        class="flex flex-col space-y-16 px-9 py-28 lg:flex-row lg:space-y-0  lg:items-center xl:px-32 dark:bg-gray-800">
         <div class="flex flex-col space-y-6">
-            <h3 class="text-2xl font-serif font-semibold tracking-wide text-left lg:text-4xl">Flexible solutions for all
+            <h3 class="text-2xl font-serif font-semibold tracking-wide text-left lg:text-4xl dark:text-zinc-50">Flexible
+                solutions for all
                 your
                 needs</h3>
             <div class="flex space-x-9">
@@ -197,11 +218,11 @@
                     <div class="flex h-12 mt-[171px] bg-blue-700 rounded-full"></div>
                 </div>
                 <div class="flex flex-col space-y-14">
-                    <h3 class="text-xl text-zinc-400 capitalize">virtual meetings</h3>
-                    <h3 class="text-xl text-zinc-400 capitalize">virtual meetings</h3>
-                    <h3 class="text-xl text-zinc-400 capitalize">virtual meetings</h3>
-                    <h3 class="text-xl text-zinc-400 capitalize">virtual meetings</h3>
-                    <h3 class="text-xl text-zinc-400 capitalize">virtual meetings</h3>
+                    <h3 class="text-xl text-zinc-400 capitalize dark:text-zinc-50">virtual meetings</h3>
+                    <h3 class="text-xl text-zinc-400 capitalize dark:text-zinc-50">virtual meetings</h3>
+                    <h3 class="text-xl text-zinc-400 capitalize dark:text-zinc-50">virtual meetings</h3>
+                    <h3 class="text-xl text-zinc-400 capitalize dark:text-zinc-50">virtual meetings</h3>
+                    <h3 class="text-xl text-zinc-400 capitalize dark:text-zinc-50">virtual meetings</h3>
                 </div>
             </div>
         </div>
@@ -215,7 +236,7 @@
 
     <!-- Participants -->
     <div
-        class="bg-[url('images/original-3bc8b0f2bda851f8448bb09a2bdc0d2a.webp')] bg-cover bg-no-repeat bg-center min-h-96 min-w-screen md:bg-[left_0px_top_50px] md:min-h-screen my-24">
+        class="bg-[url('images/original-3bc8b0f2bda851f8448bb09a2bdc0d2a.webp')] bg-cover bg-no-repeat bg-center min-h-96 min-w-screen md:bg-[left_0px_top_0px] md:min-h-screen ">
         <div class="max-w-[700px] mx-auto py-28">
             <h3
                 class="text-2xl font-bold font-serif text-fuchsia-900 md:text-5xl md:leading-tight md:text-white tracking-wide text-center">
