@@ -35,9 +35,10 @@ window.addEventListener('scroll', scroll => {
     const header = document.querySelector('#header')
     clearTimeout(timeout) // clear the execution from previous scroll
 
+    // set a time delay in executing design and get the timout id
     timeout = setTimeout(() => {
         const scrollY = window.scrollY
-
+        // Check if scroll height is greater than your target height
         if (scrollY > targetHeight) {
             header.classList.add('bg-blue-200')
         } else {
